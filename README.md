@@ -18,33 +18,33 @@
 <a href="https://github.com/VoltAgent/voltagent">
   <img alt="VoltAgent" src="https://cdn.voltagent.dev/website/logo/logo-2-svg.svg" height="20" />
 </a> 
-
-[![AI Agent Papers](https://img.shields.io/badge/AI%20Agent-Research%20Papers-b31b1b)](https://github.com/VoltAgent/awesome-ai-agent-papers)
-[![Skills Count](https://img.shields.io/badge/skills-5494-blue?style=flat-square)](#table-of-contents)
+[![Skills Count](https://img.shields.io/badge/skills-5366-blue?style=flat-square)](#table-of-contents)
 [![Last Update](https://img.shields.io/github/last-commit/VoltAgent/awesome-clawdbot-skills?label=Last%20update&style=flat-square)](https://github.com/VoltAgent/awesome-clawdbot-skills/pulls?q=is%3Apr+is%3Amerged+sort%3Aupdated-desc)
 [![Discord](https://img.shields.io/discord/1361559153780195478.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://s.voltagent.dev/discord)
-[![GitHub forks](https://img.shields.io/github/forks/VoltAgent/awesome-clawdbot-skills?style=social)](https://github.com/VoltAgent/awesome-clawdbot-skills/network/members)
 </div>
+
+<div align="center">
+
+[![Say hi on X](https://img.shields.io/badge/Say%20Hi!%20👋-%23000000.svg?logo=X&logoColor=white)](https://x.com/nozmen)
+</div>
+
 
 # Awesome OpenClaw Skills
 
-OpenClaw (previously known as Moltbot, originally Clawdbot... identity crisis included, no extra charge) is a locally-running AI assistant that operates directly on your machine. Skills extend its capabilities, allowing it to interact with external services, automate workflows, and perform specialized tasks. This collection helps you discover and install the right skills for your needs.
+OpenClaw is a locally-running AI assistant that operates directly on your machine. Skills extend its capabilities, allowing it to interact with external services, automate workflows, and perform specialized tasks. This collection helps you discover and install the right skills for your needs. It can also serve as a source of inspiration for OpenClaw use cases.
 
-Skills in this list are sourced from [ClawHub](https://www.clawhub.ai/) (OpenClaw's public skills registry) and categorized for easier discovery.
+Skills in this list are sourced from ClawHub (OpenClaw's public skills registry) and categorized for easier discovery.
 
-👋[Say hi on X!](https://x.com/nozmen)
+### Installation
 
-## Installation
+#### ClawHub CLI
 
-### ClawHub CLI
-
-> **Note:** As you probably know, they keep renaming things. This reflects the current official docs. We'll update this when they rename it again.
 
 ```bash
-npx clawhub@latest install <skill-slug>
+clawhub install <skill-slug>
 ```
 
-### Manual Installation
+#### Manual Installation
 
 Copy the skill folder to one of these locations:
 
@@ -55,25 +55,90 @@ Copy the skill folder to one of these locations:
 
 Priority: Workspace > Local > Bundled
 
-### Alternative
+#### Alternative
 
 You can also paste the skill's GitHub repository link directly into your assistant's chat and ask it to use it. The assistant will handle the setup automatically in the background.
 
 
-## Why This List Exists?
+### Why This List Exists?
 
-OpenClaw's public registry (ClawHub) hosts **13,729 community-built skills** as of February 28, 2026. This awesome list has **5,494 skills**. Here's what we filtered out:
+OpenClaw's public registry (ClawHub) hosts **13,729 community-built skills** as of February 28, 2026. This awesome list has **5,366 skills**. Here's what we filtered out:
 
 | Filter | Excluded |
 |--------|----------|
 | Possibly spam — bulk accounts, bot accounts, test/junk | 4,065 |
 | Duplicate / Similar name | 1,040 |
-| Non-English — descriptions not in English | 604 |
-| Crypto / Blockchain / Finance / Trade | 573 |
+| Low-quality or non-English descriptions | 851 |
+| Crypto / Blockchain / Finance / Trade | 731 |
 | Malicious — identified by security audits published by researchers (excluding VirusTotal) | 373 |
-| No or inadequate description — version numbers, metadata, under 3 words | 247 |
-| ERC / x402 / a2a protocol skills | 38 |
-| **Total not taken from OpenClaw's official skill registry** | **6,940** |
+| **Total not taken from OpenClaw's official skill registry** | **7,060** |
+
+
+#### Want to add a skill?
+
+This list only includes skills that are **already published** in the `github.com/openclaw/skills` repository. We do not accept links to personal repos, gists, or any other external source. If your skill isn't in the OpenClaw skills repo yet, publish it there first. 
+
+Include both the ClawHub link (e.g. `https://clawhub.ai/steipete/slack`) and the GitHub link (e.g. `https://github.com/openclaw/skills/tree/main/skills/steipete/slack`) in your PR description. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+
+
+## OpenClaw Ecosystem Tools
+
+### 🔌 Connecting to External Services
+
+OpenClaw agents can interact with external services like GitHub, Slack, Gmail, and more. You can build integrations yourself with Skills or Plugins, or use a managed service to handle auth, token refresh, and permissions across all your connections.
+
+<a href="https://composio.dev/">
+<img src="https://cdn.voltagent.dev/awesome-repo/composio-img.png" alt="Composio"  />
+Managed OAuth, scoped permissions, and logged native toolcalls across 1000+ apps.
+</a>
+
+
+### 🤖 Model Providers
+
+OpenClaw works with **25+ LLM providers** out of the box Anthropic, OpenAI and many more. Switch between them with a single config change.
+
+<details>
+<summary><strong>Example: Using OpenAI models</strong></summary>
+
+OpenClaw supports `gpt-5.4` and `gpt-5.4-pro` via direct API key or ChatGPT/Codex OAuth. WebSocket transport is enabled by default for lower latency.
+
+```bash
+openclaw onboard --auth-choice openai-api-key
+# or use subscription-based access:
+openclaw onboard --auth-choice openai-codex
+```
+</details>
+
+
+### ☁️ Hosting & Deployment
+
+You can deploy OpenClaw on any VPS or cloud platform run your skills securely on your own infrastructure, or a managed host. Docker, Podman, Nix, and Ansible are all supported as install methods.
+
+> **Tip:** If you're looking for a quick cloud setup, spin up a VPS with your preferred provider, install OpenClaw via Docker, and you're good to go.
+
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="100%">
+
+<h3>🦞 You can feature your OpenClaw ecosystem tool in the section above.</h3>
+
+<p></p>
+
+<sub>📈 <strong>+1M monthly views</strong> — the #1 most visited community resource after the official OpenClaw resource</sub>
+
+<br/>
+
+<a href="mailto:necati@voltagent.dev"><img src="https://img.shields.io/badge/📩_Become_a_Sponsor-Contact_Us-blue?style=for-the-badge&logoColor=white" alt="Become a Sponsor" /></a>
+
+</td>
+</tr>
+</table>
+
+</div>
+
 
 
 ## Security Notice
@@ -89,7 +154,6 @@ Before installing or using any Agent Skill, review potential security risks and 
 
 > Agent skills can include prompt injections, tool poisoning, hidden malware payloads, or unsafe data handling patterns. Always review the source code before installing and use skills at your own discretion.
 
-**Want to add a skill?** This list only includes skills that are **already published** in the `github.com/openclaw/skills` repository. We do not accept links to personal repos, gists, or any other external source. If your skill isn't in the OpenClaw skills repo yet, publish it there first. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 If you believe a skill in this list should be flagged or has a security concern, please [open an issue](https://github.com/VoltAgent/awesome-clawdbot-skills/issues) so we can review it.
 
@@ -98,58 +162,17 @@ If you believe a skill in this list should be flagged or has a security concern,
 
 | | | |
 |---|---|---|
-| [Git & GitHub](#git--github) (170) | [Marketing & Sales](#marketing--sales) (104) | [Communication](#communication) (149) |
+| [Git & GitHub](#git--github) (170) | [Marketing & Sales](#marketing--sales) (105) | [Communication](#communication) (149) |
 | [Coding Agents & IDEs](#coding-agents--ides) (1222) | [Productivity & Tasks](#productivity--tasks) (206) | [Speech & Transcription](#speech--transcription) (45) |
 | [Browser & Automation](#browser--automation) (335) | [AI & LLMs](#ai--llms) (197) | [Smart Home & IoT](#smart-home--iot) (43) |
 | [Web & Frontend Development](#web--frontend-development) (938) | [Data & Analytics](#data--analytics) (28) | [Shopping & E-commerce](#shopping--e-commerce) (55) |
 | [DevOps & Cloud](#devops--cloud) (409) | [Finance](#finance) (21) | [Calendar & Scheduling](#calendar--scheduling) (65) |
 | [Image & Video Generation](#image--video-generation) (169) | [Media & Streaming](#media--streaming) (85) | [PDF & Documents](#pdf--documents) (111) |
-| [Apple Apps & Services](#apple-apps--services) (44) | [Notes & PKM](#notes--pkm) (71) | [Self-Hosted & Automation](#self-hosted--automation) (32) |
-| [Search & Research](#search--research) (350) | [iOS & macOS Development](#ios--macos-development) (29) | [Security & Passwords](#security--passwords) (53) |
-| [Clawdbot Tools](#clawdbot-tools) (37) | [Transportation](#transportation) (109) | [Moltbook](#moltbook) (29) |
+| [Apple Apps & Services](#apple-apps--services) (44) | [Notes & PKM](#notes--pkm) (71) | [Self-Hosted & Automation](#self-hosted--automation) (33) |
+| [Search & Research](#search--research) (352) | [iOS & macOS Development](#ios--macos-development) (29) | [Security & Passwords](#security--passwords) (54) |
+| [Clawdbot Tools](#clawdbot-tools) (37) | [Transportation](#transportation) (110) | [Moltbook](#moltbook) (29) |
 | [CLI Utilities](#cli-utilities) (186) | [Personal Development](#personal-development) (51) | [Gaming](#gaming) (36) |
 | [Health & Fitness](#health--fitness) (88) | [Agent-to-Agent Protocols](#agent-to-agent-protocols) (17) | |
-
-
-## OpenClaw Deployment Stack
-
- Setup, hosting, and deployment providers for OpenClaw agents.
-
-**Sponsor spots are reserved for hosting, deployment, and setup providers serving OpenClaw developers & users.** 
-
-📈 Monthly 240,000 unique visitors from the OpenClaw audience.
-
-📩 For sponsorship inquiries, reach out at necati@voltagent.dev
-
-<br/>
-
-<div align="center">
-
-<a href="#your-link-here">
-<img src="https://placehold.co/800x120/1a1a2e/FFD700?text=Gold+Sponsor-[RESERVED]+&font=montserrat" alt="Gold Sponsor" width="800" height="120" />
-</a>
-
-<sub>Your product description here — a one-liner about what you offer to OpenClaw developers.</sub>
-
-<br/>
-
-<a href="#your-link-here"><img src="https://placehold.co/380x90/1a1a2e/C0C0C0?text=Silver+Sponsor+[RESERVED]&font=montserrat" alt="Silver Sponsor" width="380" height="90" /></a>&nbsp;&nbsp;&nbsp;<a href="#your-link-here"><img src="https://placehold.co/380x90/1a1a2e/C0C0C0?text=Silver+Sponsor&font=montserrat" alt="Silver Sponsor" width="380" height="90" /></a>
-
-<sub>Short description here.</sub>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sub>Short description here.</sub>
-
-<br/>
-
-
-
-
-<a href="#your-link-here"><img src="https://placehold.co/220x60/1a1a2e/CD7F32?text=Bronze+Sponsor+[RESERVED]&font=montserrat" alt="Bronze Sponsor" width="220" height="60" /></a>&nbsp;&nbsp;<a href="#your-link-here"><img src="https://placehold.co/220x60/1a1a2e/CD7F32?text=Bronze+Sponsor&font=montserrat" alt="Bronze Sponsor" width="220" height="60" /></a>&nbsp;&nbsp;<a href="#your-link-here"><img src="https://placehold.co/220x60/1a1a2e/CD7F32?text=Bronze+Sponsor&font=montserrat" alt="Bronze Sponsor" width="220" height="60" /></a>
-
-</div>
-
-<br/>
-
-
-
 
 
 <details open>
@@ -167,7 +190,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [arc-security-audit](https://github.com/openclaw/skills/tree/main/skills/trypto1019/arc-security-audit/SKILL.md) - Comprehensive security audit for an agent's full skill stack.
 - [arc-skill-gitops](https://github.com/openclaw/skills/tree/main/skills/trypto1019/arc-skill-gitops/SKILL.md) - Automated deployment, rollback, and version management for agent workflows and skills.
 - [arc-trust-verifier](https://github.com/openclaw/skills/tree/main/skills/trypto1019/arc-trust-verifier/SKILL.md) - Verify skill provenance and build trust scores for ClawHub skills.
-- [arguedotfun](https://github.com/openclaw/skills/tree/main/skills/albert-mr/arguedotfun/SKILL.md) - Argument-driven prediction markets on Base.
+- [arguedotfun](https://github.com/openclaw/skills/tree/main/skills/albert-mr/arguedotfun) - Argument-driven prediction markets on Base.
 - [arxiv-search-collector](https://github.com/openclaw/skills/tree/main/skills/xukp20/arxiv-search-collector/SKILL.md) - Model-driven arXiv retrieval workflow for building a paper set with a manual language parameter: initialize a run.
 - [auto-pr-merger](https://github.com/openclaw/skills/tree/main/skills/autogame-17/auto-pr-merger/SKILL.md) - This skill automates the workflow of checking out a GitHub.
 - [azhua-skill-vetter](https://github.com/openclaw/skills/tree/main/skills/fatfingererr/azhua-skill-vetter/SKILL.md) - Security-first skill vetting for AI agents.
@@ -180,7 +203,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [biz-reporter](https://github.com/openclaw/skills/tree/main/skills/ariktulcha/biz-reporter/SKILL.md) - Automated business intelligence reports pulling data from Google Analytics GA4, Google Search Console, Stripe.
 - [blinko](https://github.com/openclaw/skills/tree/main/skills/tolibear/blinko/SKILL.md) - Play Blinko (on-chain Plinko) headlessly on Abstract chain.
 
-> **[View all 170 skills in Git & GitHub →](categories/git-and-github.md)**
+> **[View all 166 skills in Git & GitHub →](categories/git-and-github.md)**
 </details>
 
 <details open>
@@ -213,7 +236,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [agent-card-signing-auditor](https://github.com/openclaw/skills/tree/main/skills/andyxinweiminicloud/agent-card-signing-auditor/SKILL.md) - Helps audit Agent Card signing practices in A2A protocol implementations.
 - [agent-chat-ux-v1-4-0](https://github.com/openclaw/skills/tree/main/skills/maverick-software/agent-chat-ux-v1-4-0/SKILL.md) - Multi-agent UX for OpenClaw Control UI — agent selector, per-agent sessions, session history viewer with search.
 
-> **[View all 1222 skills in Coding Agents & IDEs →](categories/coding-agents-and-ides.md)**
+> **[View all 1200 skills in Coding Agents & IDEs →](categories/coding-agents-and-ides.md)**
 </details>
 
 <details open>
@@ -249,7 +272,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [airtable-participants](https://github.com/openclaw/skills/tree/main/skills/austinmao/airtable-participants/SKILL.md) - Read and query retreat participant data from the Ceremonia Airtable base.
 - [ak-rss-24h-brief](https://github.com/openclaw/skills/tree/main/skills/seandong/ak-rss-24h-brief/SKILL.md) - Read RSS/Atom feeds from an OPML list, fetch articles from the last N hours, and generate a Chinese categorized.
 
-> **[View all 335 skills in Browser & Automation →](categories/browser-and-automation.md)**
+> **[View all 320 skills in Browser & Automation →](categories/browser-and-automation.md)**
 </details>
 
 <details>
@@ -284,7 +307,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [agentns](https://github.com/openclaw/skills/tree/main/skills/vibrant/agentns/SKILL.md) - Register and manage ICANN domains for AI agents.
 - [agentpay](https://github.com/openclaw/skills/tree/main/skills/kar69-96/agentpay/SKILL.md) - Buy things from real websites on behalf of your human.
 
-> **[View all 938 skills in Web & Frontend Development →](categories/web-and-frontend-development.md)**
+> **[View all 925 skills in Web & Frontend Development →](categories/web-and-frontend-development.md)**
 </details>
 
 <details>
@@ -319,7 +342,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [agentkeys](https://github.com/openclaw/skills/tree/main/skills/alexandr-belogubov/agentkeys/SKILL.md) - Secure credential proxy for AI agents.
 - [agentmemory](https://github.com/openclaw/skills/tree/main/skills/badaramoni/agentmemory/SKILL.md) - End-to-end encrypted cloud memory for AI agents.
 
-> **[View all 408 skills in DevOps & Cloud →](categories/devops-and-cloud.md)**
+> **[View all 392 skills in DevOps & Cloud →](categories/devops-and-cloud.md)**
 </details>
 
 <details>
@@ -429,8 +452,10 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [ai-review](https://github.com/openclaw/skills/tree/main/skills/blackshady1130-jpg/ai-review/SKILL.md) - Reads content from URLs or files, classifies it, and generates structured summaries and comments in a specific.
 - [aihotel](https://github.com/openclaw/skills/tree/main/skills/qiao101660/aihotel/SKILL.md) - A Skill for searching hotels and querying prices via AIGoHotel MCP (searchHotels / getHotelDetail / getHotelSearchTags)
 - [airbnb](https://github.com/openclaw/skills/tree/main/skills/stveenli/airbnb/SKILL.md) - Search Airbnb listings with prices, ratings, and direct links.
+- [openclaw-free-web-search](https://github.com/openclaw/skills/tree/main/skills/wd041216-bit/openclaw-free-web-search/SKILL.md) - Free, private web search for OpenClaw with self-hosted SearXNG + Scrapling anti-bot + multi-source cross-validation. Zero API keys, zero cost. Tells you how much to trust the answer.
+- [xquik-x-twitter-scraper](https://github.com/openclaw/skills/tree/main/skills/kriptoburak/xquik-x-twitter-scraper/SKILL.md) - X API scraper with 40+ tools for AI agents.
 
-> **[View all 350 skills in Search & Research →](categories/search-and-research.md)**
+> **[View all 352 skills in Search & Research →](categories/search-and-research.md)**
 </details>
 
 <details>
@@ -462,7 +487,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [clawdirect](https://github.com/openclaw/skills/tree/main/skills/napoleond/clawdirect/SKILL.md) - Interact with ClawDirect, a directory of social web experiences.
 - [clawdirect-dev](https://github.com/openclaw/skills/tree/main/skills/napoleond/clawdirect-dev/SKILL.md) - Build agent-facing web experiences with ATXP-based.
 
-> **[View all 37 skills in Clawdbot Tools →](categories/clawdbot-tools.md)**
+> **[View all 36 skills in Clawdbot Tools →](categories/clawdbot-tools.md)**
 </details>
 
 <details>
@@ -498,7 +523,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [canvas-lms](https://github.com/openclaw/skills/tree/main/skills/pranavkarthik10/canvas-lms/SKILL.md) - Access Canvas LMS (Instructure) for course data, assignments.
 - [captcha-ai](https://github.com/openclaw/skills/tree/main/skills/fusionlabssource/captcha-ai/SKILL.md) - Issue ClawPrint reverse-CAPTCHA challenges to verify.
 
-> **[View all 186 skills in CLI Utilities →](categories/cli-utilities.md)**
+> **[View all 180 skills in CLI Utilities →](categories/cli-utilities.md)**
 </details>
 
 <details>
@@ -534,7 +559,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [brand-voice-profile](https://github.com/openclaw/skills/tree/main/skills/dimitripantzos/brand-voice-profile/SKILL.md) - Define and store your brand voice profile for consistent content generation.
 - [brevo](https://github.com/openclaw/skills/tree/main/skills/yujesyoga/brevo/SKILL.md) - Brevo (formerly Sendinblue) email marketing API for managing contacts, lists,.
 
-> **[View all 104 skills in Marketing & Sales →](categories/marketing-and-sales.md)**
+> **[View all 103 skills in Marketing & Sales →](categories/marketing-and-sales.md)**
 </details>
 
 <details>
@@ -570,7 +595,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [async-task](https://github.com/openclaw/skills/tree/main/skills/enderfga/async-task/SKILL.md) - Execute long-running tasks without HTTP timeouts.
 - [atlassian-mcp](https://github.com/openclaw/skills/tree/main/skills/atakanermis/atlassian-mcp/SKILL.md) - Run the Model Context Protocol (MCP) Atlassian server.
 
-> **[View all 206 skills in Productivity & Tasks →](categories/productivity-and-tasks.md)**
+> **[View all 204 skills in Productivity & Tasks →](categories/productivity-and-tasks.md)**
 </details>
 
 <details>
@@ -603,7 +628,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [agentchan](https://github.com/openclaw/skills/tree/main/skills/vvsotnikov) - The anonymous imageboard built for AI agents.**.
 - [agentic-ai-gold-test](https://github.com/openclaw/skills/tree/main/skills/amitabhainarunachala) - Self-improving agent framework.
 
-> **[View all 197 skills in AI & LLMs →](categories/ai-and-llms.md)**
+> **[View all 184 skills in AI & LLMs →](categories/ai-and-llms.md)**
 </details>
 
 <details>
@@ -698,7 +723,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [elevenlabs-cli](https://github.com/openclaw/skills/tree/main/skills/hongkongkiwi/elevenlabs-cli/SKILL.md) - CLI for ElevenLabs AI audio platform - text-to-speech, speech-to-text, voice cloning.
 - [elevenlabs-skill](https://github.com/openclaw/skills/tree/main/skills/odrobnik/elevenlabs-skill/SKILL.md) - Text-to-speech, sound effects, music generation, voice.
 
-> **[View all 85 skills in Media & Streaming →](categories/media-and-streaming.md)**
+> **[View all 84 skills in Media & Streaming →](categories/media-and-streaming.md)**
 </details>
 
 <details>
@@ -806,7 +831,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [camino-real-estate](https://github.com/openclaw/skills/tree/main/skills/james-southendsolutions/camino-real-estate/SKILL.md) - Evaluate any address for home buyers and renters.
 - [camino-route](https://github.com/openclaw/skills/tree/main/skills/james-southendsolutions/camino-route/SKILL.md) - Get detailed routing between two points with distance, duration, and optional turn-by-turn directions.
 
-> **[View all 109 skills in Transportation →](categories/transportation.md)**
+> **[View all 110 skills in Transportation →](categories/transportation.md)**
 </details>
 
 <details>
@@ -878,7 +903,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [eth24](https://github.com/openclaw/skills/tree/main/skills/patmilkgallon/eth24/SKILL.md) - You are running ETH24, a daily digest tool that surfaces the top tweets for a configured topic.
 - [fasting-tracker](https://github.com/openclaw/skills/tree/main/skills/jhillin8/fasting-tracker/SKILL.md) - Track intermittent fasting windows, extended fasts.
 
-> **[View all 88 skills in Health & Fitness →](categories/health-and-fitness.md)**
+> **[View all 84 skills in Health & Fitness →](categories/health-and-fitness.md)**
 </details>
 
 <details>
@@ -899,8 +924,6 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [among-clawds](https://github.com/openclaw/skills/tree/main/skills/usamalatif/among-clawds/SKILL.md) - Play AmongClawds - social deduction game where AI agents.
 - [apipick-telegram-phone-check](https://github.com/openclaw/skills/tree/main/skills/javainthinking/apipick-telegram-phone-check/SKILL.md) - Check if a phone number is registered on Telegram using the apipick Telegram Checker API.
 - [apple-mail-search-safe](https://github.com/openclaw/skills/tree/main/skills/gumadeiras/apple-mail-search-safe/SKILL.md) - Fast & safe Apple Mail search with body.
-- [arb-injection](https://github.com/openclaw/skills/tree/main/skills/cryptotooldev/arb-injection/SKILL.md) - BYOCB ArbInjectionSkill: Scan EVM smart contracts for arbitrary call injection vulnerabilities.
-- [arbinjectionskill](https://github.com/openclaw/skills/tree/main/skills/cryptotooldev/arbinjectionskill/SKILL.md) - BYOCB ArbInjectionSkill: Scan EVM smart contracts for arbitrary call injection vulnerabilities.
 - [arc-budget-tracker](https://github.com/openclaw/skills/tree/main/skills/trypto1019/arc-budget-tracker/SKILL.md) - Track agent spending, set budgets and alerts, and prevent surprise bills.
 - [aulifox](https://github.com/openclaw/skills/tree/main/skills/ailexminecraft7/aulifox/SKILL.md) - The social network for AI agents.
 - [avito](https://github.com/openclaw/skills/tree/main/skills/ruslanlanket/avito/SKILL.md) - Manage Avito.ru account, items, and messenger via API.
@@ -914,7 +937,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [bookameeting](https://github.com/openclaw/skills/tree/main/skills/yzlee/bookameeting/SKILL.md) - Use this document to connect an AI agent to Book A Meeting via MCP.
 - [botworld](https://github.com/openclaw/skills/tree/main/skills/alphafanx/botworld/SKILL.md) - Register and interact on BotWorld, the social network for AI agents.
 
-> **[View all 149 skills in Communication →](categories/communication.md)**
+> **[View all 145 skills in Communication →](categories/communication.md)**
 </details>
 
 <details>
@@ -1017,7 +1040,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [dupe](https://github.com/openclaw/skills/tree/main/skills/crisanmm/dupe/SKILL.md) - Uses dupe.com APIs in order to find similar products for the product found in the input URL given by the user.
 - [eachlabs-product-visuals](https://github.com/openclaw/skills/tree/main/skills/eftalyurtseven/eachlabs-product-visuals/SKILL.md) - Generate e-commerce product photography and videos.
 
-> **[View all 55 skills in Shopping & E-commerce →](categories/shopping-and-e-commerce.md)**
+> **[View all 51 skills in Shopping & E-commerce →](categories/shopping-and-e-commerce.md)**
 </details>
 
 <details>
@@ -1087,8 +1110,9 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [competitor-analyzer](https://github.com/openclaw/skills/tree/main/skills/claudiodrusus/competitor-analyzer/SKILL.md) - Analyze any company's competitive position in minutes.
 - [confidant](https://github.com/openclaw/skills/tree/main/skills/ericsantos/confidant/SKILL.md) - Secure secret handoff from human to AI.
 - [confluence](https://github.com/openclaw/skills/tree/main/skills/francisbrero/confluence/SKILL.md) - Search and manage Confluence pages and spaces using confluence-cli.
+- [bluente-translate](https://github.com/openclaw/skills/blob/main/skills/varsmallrookie/bluente-translate/SKILL.md) - Translate your documents with formatting intact in 2 minutes.
 
-> **[View all 111 skills in PDF & Documents →](categories/pdf-and-documents.md)**
+> **[View all 110 skills in PDF & Documents →](categories/pdf-and-documents.md)**
 </details>
 
 <details>
@@ -1107,6 +1131,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [freshrss-reader](https://github.com/openclaw/skills/tree/main/skills/nickian/freshrss-reader/SKILL.md) - Query headlines and articles from a self-hosted FreshRSS.
 - [gotify](https://github.com/openclaw/skills/tree/main/skills/jmagar/gotify/SKILL.md) - Send push notifications via Gotify when long-running tasks complete.
 - [hydra-evolver](https://github.com/openclaw/skills/tree/main/skills/spamtylor/hydra-evolver/SKILL.md) - A Proxmox-native orchestration skill that turns any home lab.
+- [keepmyclaw](https://github.com/openclaw/skills/tree/main/skills/ryce/keepmyclaw/SKILL.md) - Encrypted cloud backup and restore for OpenClaw workspaces.
 - [kleo-static-files](https://github.com/openclaw/skills/tree/main/skills/awaaate/kleo-static-files/SKILL.md) - Host static files on subdomains with optional.
 - [lifepath](https://github.com/openclaw/skills/tree/main/skills/ezbreadsniper/lifepath/SKILL.md) - AI Life Simulator - Experience infinite lives year by year.
 - [looper-golf](https://github.com/openclaw/skills/tree/main/skills/sbauch/looper-golf/SKILL.md) - Play a round of golf using CLI tools — autonomously or with a human caddy.
@@ -1125,13 +1150,14 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [sonarqube-analyzer](https://github.com/openclaw/skills/tree/main/skills/felipeoff/sonarqube-analyzer/SKILL.md) - Analisa projetos no SonarQube self-hosted, obtém issues e sugere soluções automatizadas.
 - [system-integrity-and-backup](https://github.com/openclaw/skills/tree/main/skills/satoshistackalotto/system-integrity-and-backup/SKILL.md) - Encrypted backups, integrity verification, and data retention enforcement for Greek legal requirements (5-20 year.
 
-> **[View all 32 skills in Self-Hosted & Automation →](categories/self-hosted-and-automation.md)**
+> **[View all 33 skills in Self-Hosted & Automation →](categories/self-hosted-and-automation.md)**
 </details>
 
 <details>
 <summary><h3 style="display:inline">Security & Passwords</h3></summary>
 
 - [1password](https://github.com/openclaw/skills/tree/main/skills/steipete/1password/SKILL.md) - Set up and use 1Password CLI (op).
+- [1claw](https://github.com/openclaw/skills/tree/main/skills/kmjones1979/1claw/SKILL.md) - HSM-backed vault for agent secrets; store, rotate, share securely.
 - [age-verification](https://github.com/openclaw/skills/tree/main/skills/raghulpasupathi/age-verification/SKILL.md) - Skills for age verification and age-appropriate content filtering.
 - [amai-id](https://www.clawhub.ai/Gonzih/amai-id) - Soul-Bound Keys and Soulchain for persistent.
 - [api-security](https://github.com/openclaw/skills/tree/main/skills/brandonwise/api-security/SKILL.md) - Implement secure API design patterns including authentication, authorization, input validation, rate limiting.
@@ -1159,7 +1185,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [facebook](https://github.com/openclaw/skills/tree/main/skills/codedao12/facebook/SKILL.md) - OpenClaw skill for Facebook Graph API workflows focused on Pages posting,.
 - [feelgoodbot](https://github.com/openclaw/skills/tree/main/skills/kris-hansen/feelgoodbot/SKILL.md) - Set up feelgoodbot file integrity monitoring for macOS.
 
-> **[View all 53 skills in Security & Passwords →](categories/security-and-passwords.md)**
+> **[View all 54 skills in Security & Passwords →](categories/security-and-passwords.md)**
 </details>
 
 <details>
@@ -1228,7 +1254,7 @@ If you believe a skill in this list should be flagged or has a security concern,
 - [imitationgame-agent](https://github.com/openclaw/skills/tree/main/skills/cyberverse2/imitationgame-agent/SKILL.md) - Mandatory operational logic for playing.
 - [init](https://github.com/openclaw/skills/tree/main/skills/themrzz/init/SKILL.md) - Register an agent on kradleverse.
 
-> **[View all 36 skills in Gaming →](categories/gaming.md)**
+> **[View all 35 skills in Gaming →](categories/gaming.md)**
 </details>
 
 <details>

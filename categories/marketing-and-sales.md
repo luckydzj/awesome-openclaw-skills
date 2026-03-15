@@ -2,7 +2,7 @@
 
 [← Back to main list](../README.md#table-of-contents)
 
-**104 skills**
+**103 skills**
 
 - [4chan-reader](https://github.com/openclaw/skills/tree/main/skills/aiasisbot61/4chan-reader/SKILL.md) - Browse 4chan boards and extract thread discussions.
 - [ab-test-setup](https://github.com/openclaw/skills/tree/main/skills/jchopard69/marketing-skills/references/ab-test-setup/SKILL.md) - When the user wants to plan.
@@ -12,7 +12,6 @@
 - [affiliatematic](https://github.com/openclaw/skills/tree/main/skills/dowands/affiliatematic/SKILL.md) - Integrate AI-powered Amazon affiliate product recommendations.
 - [agenticcreed-signup-lead](https://github.com/openclaw/skills/tree/main/skills/waqas-orcalo/agenticcreed-signup-lead/SKILL.md) - Create a signup lead in the AgenticCreed system using the public HTTP endpoint.
 - [alibaba-supplier-outreach](https://github.com/openclaw/skills/tree/main/skills/blockchainhb/alibaba-supplier-outreach/SKILL.md) - Find Alibaba suppliers via LaunchFast, contact them with optimized outreach messages, check their replies.
-- [alura](https://github.com/openclaw/skills/tree/main/skills/evilboyajay/alura/SKILL.md) - Integrate with Alura Trading backend API.
 - [analytics-and-advisory-intelligence](https://github.com/openclaw/skills/tree/main/skills/satoshistackalotto/analytics-and-advisory-intelligence/SKILL.md) - Cross-client analytics for Greek accounting firms.
 - [apollo](https://github.com/openclaw/skills/tree/main/skills/jhumanj/apollo/SKILL.md) - Interact with Apollo.io REST API (people/org enrichment, search, lists).
 - [ar-filter-generation](https://github.com/openclaw/skills/tree/main/skills/eftalyurtseven/ar-filter-generation/SKILL.md) - Generate AR filters and face effects using each::sense AI.
@@ -28,7 +27,6 @@
 - [blog-writer](https://github.com/openclaw/skills/tree/main/skills/tomstools11/blog-writer/SKILL.md) - This skill should be used when writing blog posts, articles.
 - [bluesky](https://github.com/openclaw/skills/tree/main/skills/jeffaf/bluesky/SKILL.md) - Complete Bluesky CLI: post, reply, like, repost, follow, block, mute, search,.
 - [botsee](https://github.com/openclaw/skills/tree/main/skills/grahac/botsee/SKILL.md) - Monitor your brand's AI visibility via BotSee API.
-- [bottyfans](https://github.com/openclaw/skills/tree/main/skills/cartoonitunes/bottyfans/SKILL.md) - BottyFans agent skill for autonomous creator monetization.
 - [brand-cog](https://github.com/openclaw/skills/tree/main/skills/nitishgargiitd/brand-cog/SKILL.md) - Other tools make logos.
 - [brand-guidelines](https://github.com/openclaw/skills/tree/main/skills/seanphan/brand-guidelines/SKILL.md) - Applies Anthropic's official brand colors and typography.
 - [brand-voice-profile](https://github.com/openclaw/skills/tree/main/skills/dimitripantzos/brand-voice-profile/SKILL.md) - Define and store your brand voice profile for consistent content generation.
@@ -94,6 +92,7 @@
 - [sentiment-priority-scorer](https://github.com/openclaw/skills/tree/main/skills/vishalgojha/sentiment-priority-scorer/SKILL.md) - Score normalized real-estate leads using sentiment, urgency, intent, recency, and record type to produce.
 - [signet](https://github.com/openclaw/skills/tree/main/skills/sebayaki/signet/SKILL.md) - Interact with Signet onchain advertising on Hunt Town.
 - [signup-lead](https://github.com/openclaw/skills/tree/main/skills/waqas-orcalo/signup-lead/SKILL.md) - Create a signup lead in the AgenticCreed system using the public HTTP endpoint.
+- [simplified-social-media](https://github.com/openclaw/skills/tree/main/skills/jacksimplified/simplified-social-media/SKILL.md) - Manage your entire social media presence — post, schedule, and analyze — directly from your AI coding tool.
 - [social-media-lead-generation](https://github.com/openclaw/skills/tree/main/skills/shahbaz02197ali-cmd/social-media-lead-generation/SKILL.md) - This skill helps businesses, training institutes, and online educators generate leads and sales using social media.
 - [solo-metrics-track](https://github.com/openclaw/skills/tree/main/skills/fortunto2/solo-metrics-track/SKILL.md) - Set up PostHog metrics plan with event funnel, KPI benchmarks, and kill/iterate/scale decision thresholds.
 - [sovereign-brand-voice-writer](https://github.com/openclaw/skills/tree/main/skills/ryudi84/sovereign-brand-voice-writer/SKILL.md) - You are a content writer who has perfectly internalized the user's brand voice.
